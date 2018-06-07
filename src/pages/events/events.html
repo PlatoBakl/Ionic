@@ -14,10 +14,9 @@
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content>
   <ion-toolbar>
-    <ion-segment [(ngModel)]="icons" color="secondary">
+    <ion-segment full [(ngModel)]="icons" color="primary">
       <ion-segment-button value="camera">
         <ion-icon name="camera"></ion-icon>
       </ion-segment-button>
@@ -26,4 +25,12 @@
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
+
+  <ion-grid padding>
+    <ion-row>
+      <ion-col>
+        test
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,0 +1,58 @@
+<!--
+  Generated template for the EventPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>HaveFun</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+       <ion-row>
+        <ion-col col-12>
+			<ion-img style="width: 100%; height: 150px;" src="{{event.image}}"></ion-img>
+        </ion-col>		
+        <ion-col col-12 >
+          <b>{{event.name}}</b>
+        </ion-col>
+        <ion-col col-12 >
+          
+          <div class="wrapper">
+            <div class="info">
+                  <ion-row>
+                    <ion-col >
+                          <p><ion-icon name="pin" ion-text color="primary"></ion-icon><label ion-text color="dark">{{event.place}}</label></p>
+                    </ion-col>
+                    <ion-col col-12>                    
+                          <p><ion-icon name="calendar" ion-text color="primary"></ion-icon><label ion-text color="dark">{{event.date | date:"MM.dd.yyyy"}}</label></p>
+                    </ion-col>      
+                    <ion-col col-12>                    
+                          <p><ion-icon name="time" ion-text color="primary"></ion-icon><label ion-text color="dark">{{event.date | date:"HH:mm"}}</label></p>
+                    </ion-col>   
+                    <ion-col col-12 >                    
+                          <p><ion-icon name="cash" ion-text color="primary"></ion-icon><label ion-text color="dark">{{event.price}} грн.</label></p>
+                    </ion-col>
+                    <ion-col col-12 >                    
+                          <p><ion-icon name="home" ion-text color="primary"></ion-icon><label ion-text color="dark"><a href="{{event.url}}">{{event.url}}</a></label></p>
+                    </ion-col>                    
+                  </ion-row>
+            </div>
+          </div>
+          <hr margin-top>
+          <div>{{event.description}}</div>
+          <div text-center margin>
+	          <button ion-button icon-left>
+    				  <ion-icon name="bookmark"></ion-icon>
+    				  Пойду
+    			  </button>
+          </div>
+        </ion-col>
+      </ion-row>
+</ion-content>

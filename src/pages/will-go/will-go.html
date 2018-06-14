@@ -1,5 +1,5 @@
 <!--
-  Generated template for the EventsPage page.
+  Generated template for the WillGoPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -14,21 +14,8 @@
 </ion-header>
 
 
-
-<ion-content>
-  <div>
-    <ion-segment [(ngModel)]="tabs">
-      <ion-segment-button value="events">
-        Events
-      </ion-segment-button>
-      <ion-segment-button value="places">
-        Places
-      </ion-segment-button>
-    </ion-segment>
-  </div>
-
-  <div [ngSwitch]="tabs" padding>
-    <ion-list *ngSwitchCase="'events'">
+<ion-content padding>
+    <ion-list>
        <ion-row *ngFor="let event of events_list">
         <ion-col col-12 (click)="pushPage(event.id)">
           <b>{{event.name}}</b>
@@ -54,17 +41,4 @@
         </ion-col>
       </ion-row>
     </ion-list>
-
-    <ion-list *ngSwitchCase="'places'">
-      <ion-item *ngFor="let place of places_list">
-            <h2>{{place.name}}</h2>
-            <p>{{place.adress}}</p>
-            <p>{{place.work_time}}</p>        
-            <button ion-button item-end (click)="pushToPlace(place.id)">></button>         
-      </ion-item>
-      
-    </ion-list>
-  </div>
 </ion-content>
-
-

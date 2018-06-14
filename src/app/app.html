@@ -1,14 +1,15 @@
 <ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <ion-content>
+      <div class="wrapper_menu" [ngStyle]="{'background-image': 'url(assets/imgs/users/avatar.jpg)'}">
+        <div class="info" text-center>
+          <ion-img style="width: 100px; height: 100px;" src="assets/imgs/users/avatar.jpg" margin-top></ion-img>       
+          <h4>{{name}}</h4>
+          <p>{{email}}</p>
+        </div>
+      </div>    
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
+        <ion-icon class="icon-circle" [name]="p.icon"></ion-icon> {{p.title}}
       </button>
     </ion-list>
   </ion-content>

@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>Login</ion-title>
+    <ion-title>Вход</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -17,7 +17,7 @@
   <ion-grid>
     <ion-row>
       <ion-col text-center>
-        <ion-img src="assets/imgs/150.jpeg" height="150" width="150"></ion-img>
+        <ion-img src="assets/imgs/logo.jpg" height="150" width="150"></ion-img>
       </ion-col>
     </ion-row>
 
@@ -25,12 +25,12 @@
       <ion-col>
         <ion-list>
           <ion-item>
-            <ion-label><ion-icon name="person"></ion-icon></ion-label>
-            <ion-input type="text" placeholder="Username"></ion-input>
+            <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+            <ion-input type="text" placeholder="Email" #email></ion-input>
           </ion-item>
           <ion-item>
             <ion-label><ion-icon name="lock"></ion-icon></ion-label>
-            <ion-input type="password" placeholder="Password"></ion-input>
+            <ion-input type="password" placeholder="Password" #password></ion-input>
           </ion-item>
         </ion-list>
       </ion-col>
@@ -38,19 +38,12 @@
 
     <ion-row>
       <ion-col>
-        <button ion-button full color="primary">LOGIN</button>
+        <button ion-button full color="primary" (click)="signIn()">Войти</button>
       </ion-col>
     </ion-row>
-
     <ion-row>
       <ion-col text-center>
-          <a href="">Forgot password?</a>
-      </ion-col>
-    </ion-row>
-
-    <ion-row>
-      <ion-col text-center>
-          <a (click)="goToRegister()">Register</a>
+          <a (click)="goToRegister()">Создать нового пользовтеля</a>
       </ion-col>
     </ion-row>
   </ion-grid>
